@@ -16,7 +16,7 @@
      
 
   @empty
-   <p>Nema nis ode</p>
+   <p>Nema nis ode jbsh ga</p>
   @endforelse
 
 
