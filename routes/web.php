@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/test', 'App\Http\Controllers\HelloController@test');
 Route::get('/about', 'App\Http\Controllers\HelloController@about');
 Route::get('/services', 'App\Http\Controllers\HelloController@services');
             //ja dodajem ovde controller.
