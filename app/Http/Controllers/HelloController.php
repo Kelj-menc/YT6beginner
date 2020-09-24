@@ -13,11 +13,4 @@ class HelloController extends Controller
       {
           return view('about');
       }
-      public function services()
-      {
-        //ovde u ovaj controller ne vracam samo view nego i data iz DB
-        $services = \App\Models\Service::all();
-        
-          return view('services', compact('services'));
-      }
 }
