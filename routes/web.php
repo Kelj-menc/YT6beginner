@@ -20,7 +20,9 @@ Route::get('/', function () {
 
 Route::get('/test', 'App\Http\Controllers\HelloController@test');
 Route::get('/about', 'App\Http\Controllers\HelloController@about');
-Route::get('/services', 'App\Http\Controllers\HelloController@services');
+
+Route::get('/service', 'App\Http\Controllers\ServiceController@index');
+Route::post('/service', 'App\Http\Controllers\ServiceController@store');
             //ja dodajem ovde controller.
             //koji sam napraio i @ funkcija koju hocu da past
             //VAZNO od laravela 8 ovde moras full path da dodas
