@@ -28,5 +28,7 @@ Route::post('/service', 'App\Http\Controllers\ServiceController@store');
             //VAZNO od laravela 8 ovde moras full path da dodas
             //a ne ko pre samo ime novog controlora
 
-Route::get('/customer', 'App\Http\Controllers\CustomerController@index');
-Route::get('/customer/create', 'App\Http\Controllers\CustomerController@create');
+Route::get('/customers', 'App\Http\Controllers\CustomerController@index');
+Route::get('/customers/create', 'App\Http\Controllers\CustomerController@create');
+Route::post('/customers', 'App\Http\Controllers\CustomerController@store');
+Route::get('/customers/{customer}', 'App\Http\Controllers\CustomerController@show');

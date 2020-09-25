@@ -1,9 +1,12 @@
 <h1>Customers</h1>
 
-<a href="/customer/create">Add New Customer</a>
+<a href="/customers/create">Add New Customer</a>
 
 @forelse($customers as $customer)
-    <p><strong>name: {{$customer->name}} </strong> email: {{$customer->email}}</p>
+    <p>
+    <strong><a href="/customers/{{$customer->id}}">{{$customer->name}}</a></strong> 
+    email: {{$customer->email}}
+    </p>
 @empty
     <p>No ustomers to show for now</p>
 @endforelse

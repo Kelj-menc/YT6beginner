@@ -15,4 +15,19 @@ class CustomerController extends Controller
     {        
         return view('customer.create');
     }
+    public function store()
+    {        
+        $data = request()->validate([
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+
+        \App\Models\Customer::create($data);
+
+        return redirect('/customers');
+    }
+    public function show(\App\Models\Customer $customer)
+    {          
+        return view('customer.show', compact('customer'));
+    }
 }
