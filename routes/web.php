@@ -27,3 +27,6 @@ Route::post('/service', 'App\Http\Controllers\ServiceController@store');
             //koji sam napraio i @ funkcija koju hocu da past
             //VAZNO od laravela 8 ovde moras full path da dodas
             //a ne ko pre samo ime novog controlora
+
+Route::get('/customer', 'App\Http\Controllers\CustomerController@index');
+Route::get('/customer/create', 'App\Http\Controllers\CustomerController@create');
