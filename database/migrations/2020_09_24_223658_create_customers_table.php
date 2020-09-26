@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->unsignedInteger('active')->default(1);
             //ako hocesh neki table da nije required i ne pravi error ako ga nema
             //$table->text('notes')->nullable();
             $table->timestamps();
